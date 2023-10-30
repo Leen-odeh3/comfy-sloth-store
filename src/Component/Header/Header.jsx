@@ -1,9 +1,11 @@
 import './Header.scss'
+import TopHeader from './TopHeader'
 
 const Header = () => {
   return (
     <div>
-      header
+      <TopHeader/>
+     
     </div>
   )
 }

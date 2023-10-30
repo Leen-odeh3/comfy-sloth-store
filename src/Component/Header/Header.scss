@@ -1,0 +1,18 @@
+div{
+    &.top-header{
+        background-color: #021431;
+       vertical-align: middle;
+       padding-left: 50%;
+       padding-top: 5px;
+       height: 35px;
+     
+a{
+    font-size: 19px;
+    color:#C7C9D1;
+    &.login{
+        padding-right: 20px;
+    }
+}
+    }
+}
+//------
