@@ -10,11 +10,11 @@ const Routing = () => {
     <BrowserRouter>
   <Header/>
       <Routes>
-        <Route path="/" element={<Home/>}>
-          <Route path="/home" element={<Home />} />
           <Route path="/cart" element={<Cart/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/products" element={ <Products/>} />
+          <Route path="/" element={<Home/>}>
+          <Route index element={<Home />} />
         </Route>
       </Routes>
     </BrowserRouter>
