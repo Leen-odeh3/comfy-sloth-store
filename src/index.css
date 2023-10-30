@@ -14,4 +14,7 @@ a{
 input:focus{
   outline: none;
 }
+i,button{
+  cursor: pointer;
+}
 

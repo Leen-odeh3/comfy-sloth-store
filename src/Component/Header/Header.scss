@@ -17,6 +17,12 @@ div {
     }
 
     &.main-header {
+        i {
+            &.bi-list {
+                display: none;
+            }
+        }
+
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -77,3 +83,41 @@ div {
 }
 
 //------
+
+@media (max-width:800px) {
+    div.main-header {
+        height: 60px;
+
+        .title {
+            display: none;
+        }
+
+        i {
+            &.bi-list {
+                display: flex;
+                font-size: 30px;
+            }
+        }
+    }
+
+    div.main-header {
+        position: relative;
+
+        div.links {
+            background-color: #dce9ff80;
+            border-radius: 7px;
+            text-align: center;
+            padding: 10px;
+            width: 300px;
+            position: absolute;
+            top: 63px;
+            left: -300px;
+            transition: all .5 ease;
+
+            a {
+                margin: auto;
+                display: block;
+            }
+        }
+    }
+}
