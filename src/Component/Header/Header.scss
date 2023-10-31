@@ -33,14 +33,18 @@ div {
         div {
             &.title {
                 background-color: #057AFF;
-                width: 60px;
+                width: 70px;
                 height: 60px;
                 border-radius: 9px;
                 text-align: center;
                 align-items: center;
                 cursor: pointer;
                 line-height: 60px;
+                font-size: 25px;
 
+                &:hover{
+                    background-color:#0268de;
+                }
                 h1 {
                     color: #DBE1FF;
                 }
@@ -87,7 +91,7 @@ div {
 @media (max-width:800px) {
     div.main-header {
         height: 60px;
-
+padding: 10px 20px;
         .title {
             display: none;
         }
@@ -95,7 +99,7 @@ div {
         i {
             &.bi-list {
                 display: flex;
-                font-size: 30px;
+                font-size: 36px;
             }
         }
     }

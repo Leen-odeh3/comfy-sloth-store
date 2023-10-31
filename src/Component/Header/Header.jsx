@@ -17,7 +17,7 @@ const Header = () => {
         <div className="title">
           <h1>C</h1>
         </div>
-        <div className="links" style={{ left: open && "70px" }}>
+        <div className="links" style={{ left: open && "30px" }}>
           {navs.map((e, index) => (
             <NavLink active key={index} to={`/${e}`}>
               {e}
