@@ -1,6 +1,6 @@
 div {
     &.feature {
-        padding: 80px;
+        padding: 40px 80px;
 
         h1 {
             color: #394E6A;
@@ -48,8 +48,24 @@ div {
                     }
                 }
             }
+        }
+    }
+}
 
+@media(max-width:800px) {
+    div {
+        &.feature {
+            padding-top: 200px;
         }
     }
 
+    div.items {
+        flex-direction: column;
+
+    }
+
+    div.feature div.items div {
+        width: 100%;
+        margin-bottom: 20px;
+    }
 }
