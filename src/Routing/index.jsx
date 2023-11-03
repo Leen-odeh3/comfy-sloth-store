@@ -3,7 +3,7 @@ import Home from "../Pages/Home";
 import Header from './../Component/Header/Header'
 import Cart from '../Pages/Cart'
 import About from '../Pages/About'
-import Products from '../Pages/Products'
+import Products from '../Pages/Products/Products'
 import Modal from "../Component/Modal/Modal";
 
 const Routing = () => {
@@ -15,7 +15,7 @@ const Routing = () => {
           <Route path="/about" element={<About/>} />
           <Route path="/products" element={ <Products/>} />
           <Route path="/products/:id" element={ <Modal/>} />
-          <Route path="/home" element={<Home/>}>
+          <Route path="/" element={<Home/>}>
           <Route path="/home" element={<Home />} />
         </Route>
       </Routes>
