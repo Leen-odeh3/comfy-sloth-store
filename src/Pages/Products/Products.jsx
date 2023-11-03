@@ -7,6 +7,7 @@ import "./Products.scss";
 const Products = () => {
   const [products, setProducts] = useState([]);
   const navigate = useNavigate();
+  const [search,setsearch]=useState("");
 
   useEffect(() => {
     axios
@@ -23,11 +24,11 @@ const Products = () => {
     <div className="products-container">
       <div className="pro">
         <form>
-          <input type="text" placeholder="search Product.." />
+          <input type="text" placeholder="search Product.." onChange={(e)=>setsearch(e.target.value)} />
         </form>
       </div>
       <div className="main">
-        {products.map((product) => (
+        {products.filter((product)=>product.attributes.title.includes(search)).map((product) => (
           <div
             className="product-card"
             key={product.id}
