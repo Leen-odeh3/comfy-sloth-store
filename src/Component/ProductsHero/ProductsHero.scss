@@ -53,12 +53,12 @@ div {
         }
     }
 }
-@media(max-width:500px) {
+@media(max-width:600px) {
     div {
         &.feature {
             padding-top: 200px;
-            margin-top: 100px;
-            
+           
+            padding: 30px 40px;
         }
     }
 
@@ -73,9 +73,12 @@ div {
     }
 }
 
-@media (min-width:502px)and (max-width:1000px) {
+@media (min-width:602px)and (max-width:900px) {
     div.feature{
-       margin-top: 80px;
+   padding: 10px 20px;
+    }
+    div.partOne div.leftSide{
+        margin-top: 10px;
     }
     div.items{
          flex-wrap: wrap;

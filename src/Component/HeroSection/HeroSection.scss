@@ -1,7 +1,7 @@
 div {
     &.partOne {
         height: 600px;
-        padding: 70px;
+        padding: 50px;
         display: flex;
         text-align: center;
         justify-content: space-between;
@@ -13,7 +13,7 @@ div {
                 color: #394E6A;
 
                 h2 {
-                    font-size: 70px;
+                    font-size: 50px;
                     margin-bottom: 20px;
                 }
 
@@ -35,15 +35,15 @@ div {
             }
 
             &.leftSide {
-                padding-top: 10px;
+                padding-top: 20px;
                 border-radius: 20px;
                 background-color: #223349;
                 width: 40%;
                 height: 500px;
 
                 img {
-                    width: 95%;
-                    height: 480px;
+                    width: 90%;
+                    height: 450px;
                     border-radius: 10px;
                 }
             }
@@ -51,13 +51,24 @@ div {
     }
 }
 
-@media(max-width:900px) {
+@media(max-width:600px) {
+    div.partOne {
+        padding: 10px 20px !important;
+    }
+
     div.partOne {
         flex-direction: column;
-height:1050px ;
+        height: 1050px;
+
         div.rightSide {
             width: 90%;
             margin-bottom: 30px;
+        }
+
+        div.feature {
+            padding-top: 0px;
+            margin-top: 50px;
+            padding: 30px 40px;
         }
 
         div.leftSide {
@@ -66,6 +77,43 @@ height:1050px ;
 
             img {
                 margin-bottom: 30px;
+            }
+        }
+    }
+
+}
+
+@media(min-width:604px) and (max-width:900px) {
+    div.partOne {
+        padding: 10px 20px !important;
+    }
+
+    div.partOne div.rightSide h2 {
+        font-size: 50px;
+    }
+
+    div.partOne div.leftSide {
+        padding-top: 25px;
+
+    }
+
+    div.partOne {
+        flex-direction: column;
+        height: 1050px;
+        padding: 30px 50px;
+
+        div.rightSide {
+            width: 90%;
+
+
+        }
+
+        div.leftSide {
+            width: 97%;
+            margin-bottom: 20px;
+
+            img {
+                margin-bottom: 20px;
             }
         }
     }
