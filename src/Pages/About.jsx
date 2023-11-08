@@ -17,6 +17,7 @@ const About = () => {
           marginBottom: "15px",
           justifyContent: "center",
           marginTop: "40px",
+         marginLeft:"30%"
         }}
       >
         We love

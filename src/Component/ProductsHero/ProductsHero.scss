@@ -15,8 +15,10 @@ div {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+           
 
                 div {
+                   
                     width: 30%;
                     cursor: pointer;
                     padding-top: 15px;
@@ -51,11 +53,12 @@ div {
         }
     }
 }
-
-@media(max-width:800px) {
+@media(max-width:500px) {
     div {
         &.feature {
             padding-top: 200px;
+            margin-top: 100px;
+            
         }
     }
 
@@ -68,4 +71,19 @@ div {
         width: 100%;
         margin-bottom: 20px;
     }
+}
+
+@media (min-width:502px)and (max-width:1000px) {
+    div.feature{
+       margin-top: 80px;
+    }
+    div.items{
+         flex-wrap: wrap;
+    }
+    div.feature div.items div{
+        width: 48%;
+         margin-bottom: 20px;
+    }
+
+    
 }
