@@ -1,34 +1,34 @@
-import  { useEffect, useState } from "react";
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom"
+import { useEffect, useState } from "react";
 import axios from "axios";
+import './Modal.scss'
 
 const Modal = () => {
-  const [product, setProduct] = useState(null);
-  const { id } = useParams();
+  const {id}=useParams();
+  const [product, setProduct] = useState([]);
 
   useEffect(() => {
     axios
       .get(`https://strapi-store-server.onrender.com/api/products/${id}`)
-      .then((res) => setProduct(res.data))
-      .catch((error) => console.log(error));
-  }, [id]);
+      .then((res) => setProduct(res.data.data))
+      .catch((error) => console.error(error));
+  });
 
-  if (!product) {
-    return <div>Loading...</div>;
-  }
 
   return (
-    <div className="item-product">
-      <div style={{ display: "flex" }}>
-        <Link to="/products">Back to Products</Link>
-      </div>
-      <div>
-        <h2>{product.attributes.name}</h2>
-        <p>{product.attributes.description}</p>
-    leen
-      </div>
-    </div>
-  );
-};
+    <div className="p-page">
+<img src={product.attributes.image}/>
 
-export default Modal;
+<div className="infooo">
+<h4>{product.attributes.title}</h4>
+<p>{product.attributes.company} </p>
+<span>${product.attributes.price}</span>
+<p>{product.attributes.description}</p>
+<button>Add TO Cart</button>
+</div>
+    </div>
+
+  )
+}
+
+export default Modal
